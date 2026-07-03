@@ -57,11 +57,11 @@ In order for ROS Toolbox to function it must be linked to a valid python enterpr
 
 1. Navigate to the `HOME` tab in MATLAB and open `Settings`:
 
-    <img width="677" height="93" alt="image" src="https://github.com/user-attachments/assets/c5c117e1-ee93-4659-a9bd-b53148e5f7e6" />
+    <img width="1575" height="151" alt="image" src="https://github.com/user-attachments/assets/96e327b3-569a-4ec9-9220-a363fbb81f5f" />
 
 2. Open `ROS Toolbox` and insert the filepath to your Python enterpreter. Leave ROS Middleware (RMW) Implementation as `rmw_fastrtps_cpp`. Click `OK` once MATLAB has finished creating the venv:
 
-   <img width="560" height="404" alt="image" src="https://github.com/user-attachments/assets/5a568adf-bf6e-4697-9193-688f0c6cc376" />
+   <img width="1081" height="777" alt="image" src="https://github.com/user-attachments/assets/57007d7a-7e14-4c81-9c93-f84cbf0e39f4" />
 
 ### Load Model:
 In the MATLAB File Explorer, navigate to the location where you saved this repo. 
