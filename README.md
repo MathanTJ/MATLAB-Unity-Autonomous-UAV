@@ -4,10 +4,12 @@ A simulated UAV controlled by MATLAB scripts flies in a virtual Unity world. Bas
 # Pre-requesits
 You will need the following applications installed to setup and run this repo. The versions referenced are the ones originally used but not necasserily a requirement:
 - MATLAB R2025b. You will need the following addons:
+  - Aerospace Blockset
+  - Aerospace Toolbox
+  - Requirements Toolbox
   - ROS Toolbox
   - Simulink
   - UAV Toolbox
-  - ...
 - Unity 6.3 LTS
 - ROS2 Humble Hawksbill
 
@@ -25,7 +27,7 @@ You will need the following applications installed to setup and run this repo. T
 
 6. The installation guide will also guide you through installing the ROS TCP Connector addon in Unity. Once You've completed the `Unity Setup` section you're good to go - dont worry about the `Install Unity Robotics Demo`, its not needed for this project.
 
-7. Run the Unity scene and the ROS TCP Endpoint. You should see something like the following output in your Ubuntu terminal running the Endpoint:
+7. Run the ROS TCP Endpoint and then the Unity scene. You should see something like the following output in your Ubuntu terminal running the Endpoint:
    
    `[INFO] [1778595777.518194872] [UnityEndpoint]: Starting server on 172.28.87.13:10000`  
    `[INFO] [1778595783.216133306] [UnityEndpoint]: Connection from 172.28.80.1`  
@@ -50,6 +52,7 @@ separate camera required in scene to ttransmit as camera cannot render to textur
 ## MATLAB
 **IMPORTANT**: MATLAB must be installed either directly in your root `(C:)` or a folder with no whitespace characters (i.e. **not** `Program Files` or `Program Files x86`). This avoids issues wich can break ROS Toolbox Python scripts.
 
+### ROS Setup:
 In order for ROS Toolbox to function it must be linked to a valid python enterpreter (`3.9.x` or `3.10.x` for R2025b). If not already installed, download and install from the Python website: https://www.python.org/downloads/. Preferably install this in the same directory as your MATLAB installation.
 
 1. Navigate to the `HOME` tab in MATLAB and open `Settings`:
@@ -60,8 +63,16 @@ In order for ROS Toolbox to function it must be linked to a valid python enterpr
 
    <img width="560" height="404" alt="image" src="https://github.com/user-attachments/assets/5a568adf-bf6e-4697-9193-688f0c6cc376" />
 
-how to open matlab scripts......!!!!
+### Load Model:
+In the MATLAB File Explorer, navigate to the location where you saved this repo. 
+- Double click the `MATLAB Unity UAV.mlproj` file.
+- Once the project has loaded, double click the `MATLAB Unity UAV.prj` file to open it.
+- Under the `models` folder double click the `MasterModel`.
 
 # Running the System
+Components must be run in the following order:
+1. ROS TCP Endpoint
+2. Usity Scene
+3. MATLAB Simulink Model
 
 if get NaN error from the Vector Field Histogram Block, restart the ROS TCP Endpoint
