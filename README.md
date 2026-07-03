@@ -27,9 +27,11 @@ You will need the following applications installed to setup and run this repo. T
 
 6. The installation guide will also guide you through installing the ROS TCP Connector addon in Unity. Once You've completed the `Unity Setup` section you're good to go - dont worry about the `Install Unity Robotics Demo`, its not needed for this project.
 
-7. Run the ROS TCP Endpoint and then the Unity scene. You should see something like the following output in your Ubuntu terminal running the Endpoint:
+7. Run the ROS TCP Endpoint. You should see something like the following output in your Ubuntu terminal running the Endpoint:
    
-   `[INFO] [1778595777.518194872] [UnityEndpoint]: Starting server on 172.28.87.13:10000`  
+   `[INFO] [1778595777.518194872] [UnityEndpoint]: Starting server on 172.28.87.13:10000`
+
+put following lines in the unity setup section
    `[INFO] [1778595783.216133306] [UnityEndpoint]: Connection from 172.28.80.1`  
    `[INFO] [1778595783.358052132] [UnityEndpoint]: RegisterSubscriber(/cntrl, <class 'geometry_msgs.msg._point.Point'>) OK`  
    `etc`
