@@ -108,4 +108,4 @@ after adding ROS TCP Connector will spend a bit of time compiling scripts, impor
 in the project explorer open the `Scemes` folder and double click the `SampleScene` to open it.
 
 
-
+ignore DirectoryNotFoundException
