@@ -47,12 +47,12 @@ Continue following the instructions in the ROS TCP Endpoint installation guide w
 
 Run the Unity project. If a sucessful connection to the the ROS network has been established you should see two blue arrows in the top left of the game window:
 
-<img width="495" height="111" alt="image" src="https://github.com/user-attachments/assets/3127e9c6-68e2-43c6-8a5a-c2a1b07772ef" />
-
+<img width="495" height="111" alt="image" src="https://github.com/user-attachments/assets/3127e9c6-68e2-43c6-8a5a-c2a1b07772ef" />  
 
 Ensure show HUD is enabled in ROS settings and that the game window scale is set to 1x, or this may not be visible.
 
 7. The termial running the ROS TCP Endpoint should display something like the following:
+   
    `[INFO] [1778595783.216133306] [UnityEndpoint]: Connection from 172.28.80.1`  
    `[INFO] [1778595783.358052132] [UnityEndpoint]: RegisterSubscriber(/cntrl, <class 'geometry_msgs.msg._point.Point'>) OK`  
    `etc`
