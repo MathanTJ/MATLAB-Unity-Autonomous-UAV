@@ -75,7 +75,9 @@ In order for ROS Toolbox to function it must be linked to a valid python enterpr
 In the MATLAB File Explorer, navigate to the location where you saved this repo. 
 - Double click the `MATLAB Unity UAV.mlproj` file.
 - Once the project has loaded, double click the `MATLAB Unity UAV.prj` file to open it.
-- Under the `models` folder double click the `MasterModel` to load the Simulink model. 
+- Under the `models` folder double click the `MasterModel` to load the Simulink model.
+
+You can now delete the `MATLAB Unity UAV.mlproj` file.
 
 # Running the System
 Components must be run in the following order:
