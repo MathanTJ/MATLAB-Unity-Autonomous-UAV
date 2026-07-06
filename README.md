@@ -33,7 +33,7 @@ Download and extract this repo to an easy to access location on your device.
 
 To make setup easier for future it's advisable to source the ROS2 and workspace `setup.bash` files in your `.bashrc`. This will source ROS and your ROS workspace whenever you launch a new terminal:
 
-1. In your Ubuntu system, navigate to `home/'username'` and open the `.bashrc` file. Add the following lines at the end:  
+1. In your Ubuntu system, navigate to `home/'username'` and open the `.bashrc` file. Append the following lines at the file:  
      
    ```bash 
    source /opt/ros/humble/setup.bash  
