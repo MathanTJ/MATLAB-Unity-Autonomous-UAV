@@ -25,16 +25,9 @@ You will need the following applications installed to setup and run this repo. T
 
 5. Now follow the installation guide for the setup of the ROS TCP Endpoint. Skip the docker setup step unless you specifically want to use this method. Ensure you follow the ROS2 section, not ROS1: https://github.com/Unity-Technologies/Unity-Robotics-Hub/blob/main/tutorials/ros_unity_integration/setup.md
 
-6. The installation guide will also guide you through installing the ROS TCP Connector addon in Unity. Once You've completed the `Unity Setup` section you're good to go - dont worry about the `Install Unity Robotics Demo`, its not needed for this project.
-
 7. Run the ROS TCP Endpoint. You should see something like the following output in your Ubuntu terminal running the Endpoint:
    
    `[INFO] [1778595777.518194872] [UnityEndpoint]: Starting server on 172.28.87.13:10000`
-
-put following lines in the unity setup section
-   `[INFO] [1778595783.216133306] [UnityEndpoint]: Connection from 172.28.80.1`  
-   `[INFO] [1778595783.358052132] [UnityEndpoint]: RegisterSubscriber(/cntrl, <class 'geometry_msgs.msg._point.Point'>) OK`  
-   `etc`
 
 To make setup easier for future it's advisable to source the ROS2 and workspace `setup.bash` files in your `.bashrc`. This will source ROS and your ROS workspace whenever you launch a new terminal:
 
@@ -46,6 +39,19 @@ To make setup easier for future it's advisable to source the ROS2 and workspace 
    source install/setup.bash
    ```  
 ## Unity
+Continue following the instructions in the ROS TCP Endpoint installation guide which will guide you through installing the ROS TCP Connector addon in Unity. Once You've completed the `Unity Setup` section you're good to go - dont worry about the `Install Unity Robotics Demo`, its not needed for this project.
+
+Run the Unity project. If a sucessful connection the the ROS network has been established you should see two blue arrows in the top left of the game window:
+
+<img width="495" height="111" alt="image" src="https://github.com/user-attachments/assets/3127e9c6-68e2-43c6-8a5a-c2a1b07772ef" />
+
+Ensure show HUD is enabled in ROS settings and that the game window scale is set to 1x, or this may be visible.
+
+7. The termial running the ROS TCP Endpoint should display something like the following:
+   `[INFO] [1778595783.216133306] [UnityEndpoint]: Connection from 172.28.80.1`  
+   `[INFO] [1778595783.358052132] [UnityEndpoint]: RegisterSubscriber(/cntrl, <class 'geometry_msgs.msg._point.Point'>) OK`  
+   `etc`
+
 In Unity Hub, open the `Projects` tab, then `Add` -> .....complete!!!
 Editor version 6000.3.10f1
 
