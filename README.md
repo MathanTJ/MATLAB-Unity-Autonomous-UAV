@@ -10,10 +10,12 @@ You will need the following applications installed to setup and run this repo. T
   - ROS Toolbox
   - Simulink
   - UAV Toolbox
-- Unity 6.3 LTS
+- Unity 6.3 LTS - Editor version 6000.3.10f1
 - ROS2 Humble Hawksbill
 
 # Setup
+
+Download and extract this repo to an easy to access location on your device.
 
 ## ROS
 1. If using Windows OS you will need to install Windows Subsystem for Linux (WSL) in order to install and run ROS2. Follow this tutorial to install and setup WSL with Ubuntu 22.04: https://www.youtube.com/watch?v=PsGTlZ3SUGg  
@@ -39,12 +41,11 @@ To make setup easier for future it's advisable to source the ROS2 and workspace 
    source install/setup.bash
    ```  
 ## Unity
-In Unity Hub, open the `Projects` tab, then `Add` -> `Add project from disk`. Open the `Unity Project` folder 
-Editor version 6000.3.10f1
+In Unity Hub, open the `Projects` tab, then `Add` -> `Add project from disk`. Open the `Unity Project` folder from the dowloaded repo.
 
 Continue following the instructions in the ROS TCP Endpoint installation guide which will guide you through installing the ROS TCP Connector addon in Unity. Once You've completed the `Unity Setup` section you're good to go - dont worry about the `Install Unity Robotics Demo`, its not needed for this project.
 
-Run the Unity project. If a sucessful connection the the ROS network has been established you should see two blue arrows in the top left of the game window:
+Run the Unity project. If a sucessful connection to the the ROS network has been established you should see two blue arrows in the top left of the game window:
 
 <img width="495" height="111" alt="image" src="https://github.com/user-attachments/assets/3127e9c6-68e2-43c6-8a5a-c2a1b07772ef" />
 
@@ -76,7 +77,7 @@ In order for ROS Toolbox to function it must be linked to a valid python enterpr
 In the MATLAB File Explorer, navigate to the location where you saved this repo. 
 - Double click the `MATLAB Unity UAV.mlproj` file.
 - Once the project has loaded, double click the `MATLAB Unity UAV.prj` file to open it.
-- Under the `models` folder double click the `MasterModel`.
+- Under the `models` folder double click the `MasterModel` to load the Simulink model. 
 
 # Running the System
 Components must be run in the following order:
