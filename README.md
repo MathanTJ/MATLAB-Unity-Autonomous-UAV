@@ -87,4 +87,7 @@ Components must be run in the following order:
 
 Occasionally the ROS connection between MATLAB and Unity can glitch resulting in a NaN error originating from the Vector Field Histogram Block. If this happens just restart the ROS TCP Endpoint and it should resolve the issue.
 
-When loading Unity project corrupted library (rebuild) and tcp dependancy error (continue)
+When loading Unity project corrupted library (rebuild) and tcp dependancy error (continue) compliation erros (enter safe mode)
+
+<img width="438" height="161" alt="image" src="https://github.com/user-attachments/assets/2f75926f-cc11-40d1-b5cd-3327efe9ecc1" />
+
