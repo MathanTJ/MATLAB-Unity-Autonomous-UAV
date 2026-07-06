@@ -87,13 +87,25 @@ Components must be run in the following order:
 
 Occasionally the ROS connection between MATLAB and Unity can glitch resulting in a NaN error originating from the Vector Field Histogram Block. If this happens just restart the ROS TCP Endpoint and it should resolve the issue.
 
-When loading Unity project corrupted library (rebuild) and tcp dependancy error (continue) compliation erros (enter safe mode)
+When loading the Unity project you will likely encounter a corrupted library error. If this happens select the rebuild library option:
+
+<img width="253" height="256" alt="image" src="https://github.com/user-attachments/assets/a3603d29-544b-4995-8446-393e9f109ccd" />
+
+The project assumes you already have the ROS Connector package installed, resulting in a `Unity Package Manager Error`. Select `Continue`: 
 
 <img width="438" height="161" alt="image" src="https://github.com/user-attachments/assets/2f75926f-cc11-40d1-b5cd-3327efe9ecc1" />
 
-<img width="271" height="142" alt="image" src="https://github.com/user-attachments/assets/b77b57fb-4155-48ad-a97b-49d273f62c56" />
+This also results in compiliation errors. Select `Enter Safe Mode`:
+
+<img width="271" height="142" alt="image" src="https://github.com/user-attachments/assets/b77b57fb-4155-48ad-a97b-49d273f62c56" /> 
+
+A `Packages with Errors` window will show. Select `Open Package Manager`:
 
 <img width="264" height="94" alt="image" src="https://github.com/user-attachments/assets/59f2c271-2d3f-4a50-a9b7-716ca9d870cf" />
+
+after adding ROS TCP Connector will spend a bit of time compiling scripts, importing stuff - once finished everything should load without errors
+
+in the project explorer open the `Scemes` folder and double click the `SampleScene` to open it.
 
 
 
