@@ -57,8 +57,6 @@ Ensure show HUD is enabled in ROS settings and that the game window scale is set
    `[INFO] [1778595783.358052132] [UnityEndpoint]: RegisterSubscriber(/cntrl, <class 'geometry_msgs.msg._point.Point'>) OK`  
    `etc`
 
-separate camera required in scene to ttransmit as camera cannot render to texture (required for transmit) and render to unity display simulteaneously
-
 ## MATLAB
 **IMPORTANT**: MATLAB must be installed either directly in your root `(C:)` or a folder with no whitespace characters (i.e. **not** `Program Files` or `Program Files x86`). This avoids issues wich can break ROS Toolbox Python scripts.
 
@@ -82,7 +80,9 @@ In the MATLAB File Explorer, navigate to the location where you saved this repo.
 # Running the System
 Components must be run in the following order:
 1. ROS TCP Endpoint
-2. Usity Scene
+2. Unity Scene
 3. MATLAB Simulink Model
 
-if get NaN error from the Vector Field Histogram Block, restart the ROS TCP Endpoint
+#Known Bugs
+
+Occasionally the ROS connection between MATLAB and Unity can glitch resulting in a NaN error originating from the Vector Field Histogram Block. If this happens just restart the ROS TCP Endpoint and it should resolve the issue.
