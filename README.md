@@ -83,6 +83,6 @@ Components must be run in the following order:
 2. Unity Scene
 3. MATLAB Simulink Model
 
-#Known Bugs
+# Known Bugs
 
 Occasionally the ROS connection between MATLAB and Unity can glitch resulting in a NaN error originating from the Vector Field Histogram Block. If this happens just restart the ROS TCP Endpoint and it should resolve the issue.
