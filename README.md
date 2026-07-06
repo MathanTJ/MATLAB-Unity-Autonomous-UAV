@@ -10,7 +10,7 @@ You will need the following applications installed to setup and run this repo. T
   - ROS Toolbox
   - Simulink
   - UAV Toolbox
-- Unity 6.3 LTS - Editor version 6000.3.10f1
+- Unity 6.3 LTS - Editor version 6000.3.11f1
 - ROS2 Humble Hawksbill
 
 # Setup
