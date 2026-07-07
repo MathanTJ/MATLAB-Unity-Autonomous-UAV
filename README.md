@@ -46,6 +46,8 @@ The ROS TCP Connector addon is already included in the project. Click `Robotics`
 
 <img width="245" height="349" alt="image" src="https://github.com/user-attachments/assets/073faf23-0a6f-4767-b068-a3ea4d70f732" />
 
+In the `Project` tab under `Scenes` select the `SampleScene`. The drone and obstacle should be visible in the viewport.
+
 Run the Unity project. If a sucessful connection to the the ROS network has been established you should see two blue arrows in the top left of the game window:
 
 <img width="495" height="111" alt="image" src="https://github.com/user-attachments/assets/3127e9c6-68e2-43c6-8a5a-c2a1b07772ef" />  
@@ -70,7 +72,7 @@ In order for ROS Toolbox to function it must be linked to a valid python enterpr
 
 2. Open `ROS Toolbox` and insert the filepath to your Python enterpreter. Leave ROS Middleware (RMW) Implementation as `rmw_fastrtps_cpp`. Click `OK` once MATLAB has finished creating the venv:
 
-   <img width="1081" height="777" alt="image" src="https://github.com/user-attachments/assets/57007d7a-7e14-4c81-9c93-f84cbf0e39f4" />
+   <img width="540" height="388" alt="image" src="https://github.com/user-attachments/assets/57007d7a-7e14-4c81-9c93-f84cbf0e39f4" />
 
 ### Load Model:
 In the MATLAB File Explorer, navigate to the location where you saved this repo. 
@@ -79,6 +81,8 @@ In the MATLAB File Explorer, navigate to the location where you saved this repo.
 - Under the `models` folder double click the `MasterModel` to load the Simulink model.
 
 You can now delete the `MATLAB Unity UAV.mlproj` file.
+
+With the ROS TCP Endpoint and Unity project running you can now navigate to the `Simulation` tab and run the Simulink model. If everything is working you should see the dron fly around the obstacle and hover at its destination waypoint.
 
 # Running the System
 Components must be run in the following order:
@@ -90,7 +94,4 @@ Components must be run in the following order:
 
 Occasionally the ROS connection between MATLAB and Unity can glitch resulting in a NaN error originating from the Vector Field Histogram Block. If this happens just restart the ROS TCP Endpoint and it should resolve the issue.
 
-in the project explorer open the `Scemes` folder and double click the `SampleScene` to open it.
-
-
-ignore DirectoryNotFoundException
+Ignore any DirectoryNotFoundException errors in Unity.
