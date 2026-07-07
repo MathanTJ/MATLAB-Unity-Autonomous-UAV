@@ -42,8 +42,9 @@ To make setup easier for future it's advisable to source the ROS2 and workspace 
    ```  
 ## Unity
 In Unity Hub, open the `Projects` tab, then `Add` -> `Add project from disk`. Open the `Unity Project` folder from the dowloaded repo.
+The ROS TCP Connector addon is already included in the project. Click `Robotics` -> `ROS Settings` and set the `ROS IP Address` to the IP address you used to run the TCP Endpoint earlier. Reference the image below for all other settings:
 
-Continue following the instructions in the ROS TCP Endpoint installation guide which will guide you through installing the ROS TCP Connector addon in Unity. Once You've completed the `Unity Setup` section you're good to go - dont worry about the `Install Unity Robotics Demo`, its not needed for this project.
+<img width="245" height="349" alt="image" src="https://github.com/user-attachments/assets/073faf23-0a6f-4767-b068-a3ea4d70f732" />
 
 Run the Unity project. If a sucessful connection to the the ROS network has been established you should see two blue arrows in the top left of the game window:
 
@@ -51,7 +52,7 @@ Run the Unity project. If a sucessful connection to the the ROS network has been
 
 Ensure show HUD is enabled in ROS settings and that the game window scale is set to 1x, or this may not be visible.
 
-7. The termial running the ROS TCP Endpoint should display something like the following:
+7. The termial running the ROS TCP Endpoint should display something like the following indicating a successful connection:
    
    `[INFO] [1778595783.216133306] [UnityEndpoint]: Connection from 172.28.80.1`  
    `[INFO] [1778595783.358052132] [UnityEndpoint]: RegisterSubscriber(/cntrl, <class 'geometry_msgs.msg._point.Point'>) OK`  
