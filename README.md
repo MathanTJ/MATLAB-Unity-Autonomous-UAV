@@ -1,6 +1,3 @@
-# Unity-MATLAB-UAV
-A simulated UAV modelled in MATLAB Simulink flies in a virtual Unity world. Basic autonomy algorithms are implemeted including waypoint following combined with LIDAR informed obstacle avoidance.
-
 # Pre-requesits
 You will need the following applications installed to setup and run this repo. The versions referenced are the ones originally used but not necasserily a requirement:
 - MATLAB R2025b. You will need the following addons:
