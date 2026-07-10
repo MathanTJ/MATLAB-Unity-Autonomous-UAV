@@ -1,6 +1,5 @@
 ROS2 nodes:
-ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=192.168.1.153
-192.168.112.5
+ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=<your IP>
 
 SLAM Toolbox
 ros2 run unity_slam_bringup odom_to_tf_broadcaster
@@ -8,74 +7,40 @@ ros2 launch unity_slam_bringup unity_slam_bringup.launch.py
 
 Nav2 Stack:
 ros2 launch nav2_bringup navigation_launch.py \ use_sim_time:=false
-
 ros2 launch nav2_bringup slam_launch.py
 
 RVIZ Nav2:
 ros2 launch nav2_bringup rviz_launch.py
 
-
-
-
 To launch MATLAB:
 /usr/local/MATLAB/R2025b/bin/matlab
+To set window scale:
 s = settings;
 s.matlab.desktop.Zoom.PersonalValue=120
-
-
-To run ROS2:
-source /opt/ros/kilted/setup.bash
 
 Get IP:
 hostname -I
 
-In 
+To launch ROS2 and any nodes in ros2_ws:
 cd ~/ros2_ws 
-
-run:
 source /opt/ros/kilted/setup.bash
 source install/setup.bash
 ros2 run ros_tcp_endpoint default_server_endpoint --ros-args -p ROS_IP:=192.168.1.153
 
-To remove colcon build:
-in workspace run: 
+To remove colcon build in workspace run: 
 rm -r build/ install/ log/
 
 To get ROS2 graph:
 ros2 run rqt_graph rqt_graph
 
-
 To run Gazebo:
 gz sim
-
 ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py 
 
+To get list of installed packages:
 apt list --installed | grep <package>
 
-bash.rc filepath: /home
-
-nav2_params.yaml filepath: /opt/ros/kilted/share/nav2_bringup/params/
-the variables being used to enable and disable different functions were not recognised, and treated as strings which resulted in type errors - they have been commented out in the yaml file and replaced with booleans.
-
-after fixing this nav2 could see odom data from unity but no map from slam
-node had not been configured or launched
-ros2 lifecycle set /slam_toolbox configure
-ros2 lifecycle set /slam_toolbox activate
-rvis still cant see map
-
-
-now its back to not being able to see the odom frame on tf - look into what these actuallu arre and how they link together
-thats because you hadnt run the odom_to_tf_braodcaster. duh - look at this file see if you can work out how to get it to see the map
-
-
-James Repo Notes:
-it would appear that the unity_nav2_bringup in his ros_tcp_ws/src folder is what he used to build nav2 rather than using apt install as I did - may be wirth trying this method at soime point.(
-also note his nav2_params.yaml file is very different to mine.
-
-run rqt graph - no link between nav and unity/slam. error when running nav2_bringup suggests not recieving data from slam - paste error into gpt >>
-also try and connect rviz window
-
-check simtime
+To get node use sim time parameter:
 ros2 param get /slam_toolbox use_sim_time
 ros2 param get /controller_server use_sim_time
 ros2 param get /planner_server use_sim_time
